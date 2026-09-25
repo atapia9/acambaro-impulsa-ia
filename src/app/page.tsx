@@ -22,7 +22,6 @@ export default function HomePage() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#como-funciona" className="text-gray-600 hover:text-[#0f2557] text-sm font-medium transition-colors">Cómo funciona</a>
               <a href="#beneficios" className="text-gray-600 hover:text-[#0f2557] text-sm font-medium transition-colors">Beneficios</a>
-              <a href="#testimonios" className="text-gray-600 hover:text-[#0f2557] text-sm font-medium transition-colors">Testimonios</a>
             </div>
             <Link href="/diagnostic">
               <Button className="gradient-navy text-white border-0 hover:opacity-90">Comenzar diagnóstico</Button>
@@ -148,35 +147,6 @@ export default function HomePage() {
                       </li>
                     ))}
                   </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonios" className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-50 text-[#1e3a8a] border-blue-200">Testimonios</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0f2557] mb-4">Lo que dicen nuestros usuarios</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { name: 'María García', business: 'Boutique Moda Acámbaro', text: 'El diagnóstico me ayudó a identificar que necesitaba una tienda en línea. En 3 meses triplicamos nuestras ventas implementando el plan de IA.' },
-              { name: 'Carlos Méndez', business: 'Taller Mecánico del Centro', text: 'No sabía nada de marketing digital. El plan de 90 días fue clarísimo y pudimos empezar a atraer clientes por internet desde la primera semana.' },
-              { name: 'Ana Rodríguez', business: 'Restaurante La Familia', text: 'Pensaba que la IA era para empresas grandes. El plan personalizado me mostró herramientas gratuitas perfectas para mi restaurante.' },
-            ].map((t) => (
-              <Card key={t.name} className="border-2 hover:shadow-md transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex mb-4">
-                    {[1,2,3,4,5].map((i) => <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />)}
-                  </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed italic">"{t.text}"</p>
-                  <div>
-                    <div className="font-semibold text-[#0f2557]">{t.name}</div>
-                    <div className="text-sm text-gray-400">{t.business}</div>
-                  </div>
                 </CardContent>
               </Card>
             ))}
