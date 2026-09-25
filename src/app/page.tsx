@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import {
   ArrowRight, BarChart3, Brain, CheckCircle, Globe,
-  LineChart, Rocket, Shield, Star, TrendingUp, Users, Zap
+  LineChart, Rocket, Shield, Users
 } from 'lucide-react'
 
 export default function HomePage() {
@@ -72,25 +72,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50 border-b">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '500+', label: 'Empresas analizadas', icon: Users },
-              { value: '92%', label: 'Tasa de satisfacción', icon: Star },
-              { value: '5 min', label: 'Tiempo de diagnóstico', icon: Zap },
-              { value: '3x', label: 'Más eficiencia promedio', icon: TrendingUp },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <stat.icon className="w-6 h-6 text-[#1e3a8a] mx-auto mb-2" />
-                <div className="text-3xl font-bold text-[#0f2557]">{stat.value}</div>
-                <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="como-funciona" className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -102,7 +83,7 @@ export default function HomePage() {
             {[
               { step: '01', title: 'Completa el formulario', description: 'Responde preguntas sobre tu negocio, presencia digital y uso de tecnología en menos de 5 minutos.', icon: Users },
               { step: '02', title: 'Calculamos tu score', description: 'Nuestro algoritmo evalúa tu madurez digital en 3 dimensiones clave y te asigna un nivel de madurez.', icon: BarChart3 },
-              { step: '03', title: 'IA genera tu plan', description: 'GPT-4 analiza tus resultados y crea un diagnóstico ejecutivo y plan de 90 días personalizado.', icon: Brain },
+              { step: '03', title: 'IA genera tu plan', description: 'La IA analiza tus resultados y crea un diagnóstico ejecutivo y plan de 90 días personalizado.', icon: Brain },
               { step: '04', title: 'Implementa y crece', description: 'Recibe recomendaciones priorizadas y comienza a transformar tu negocio inmediatamente.', icon: Rocket },
             ].map((item, i) => (
               <Card key={i} className="border-2 hover:border-[#1e3a8a] transition-colors group">
@@ -158,7 +139,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto text-center">
           <Shield className="w-12 h-12 text-blue-300 mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Comienza tu transformación digital hoy</h2>
-          <p className="text-blue-100 text-lg mb-10">Únete a cientos de empresas en Acámbaro que ya están creciendo con inteligencia artificial. El diagnóstico es completamente gratuito.</p>
+          <p className="text-blue-100 text-lg mb-10">El diagnóstico es completamente gratuito.</p>
           <Link href="/diagnostic">
             <Button size="lg" className="bg-white text-[#0f2557] hover:bg-blue-50 font-semibold px-10 py-6 text-base shadow-xl">
               Realizar diagnóstico gratuito
